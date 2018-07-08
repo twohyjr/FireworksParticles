@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		EBB1B55B20F2B8F00009D821 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1B55A20F2B8F00009D821 /* AppDelegate.swift */; };
-		EBB1B55D20F2B8F00009D821 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1B55C20F2B8F00009D821 /* ViewController.swift */; };
 		EBB1B55F20F2B8F10009D821 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB1B55E20F2B8F10009D821 /* Assets.xcassets */; };
 		EBB1B56220F2B8F10009D821 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB1B56020F2B8F10009D821 /* Main.storyboard */; };
 		EBB1B56E20F2B8F10009D821 /* FireworksParticlesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1B56D20F2B8F10009D821 /* FireworksParticlesTests.swift */; };
+		EBB1B57A20F2B9360009D821 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1B57920F2B9360009D821 /* MainView.swift */; };
+		EBB1B57C20F2B93F0009D821 /* Firework.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1B57B20F2B93F0009D821 /* Firework.swift */; };
+		EBB1B57E20F2B9490009D821 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = EBB1B57D20F2B9490009D821 /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +29,6 @@
 /* Begin PBXFileReference section */
 		EBB1B55720F2B8F00009D821 /* FireworksParticles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireworksParticles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB1B55A20F2B8F00009D821 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EBB1B55C20F2B8F00009D821 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EBB1B55E20F2B8F10009D821 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB1B56120F2B8F10009D821 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBB1B56320F2B8F10009D821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +36,9 @@
 		EBB1B56920F2B8F10009D821 /* FireworksParticlesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireworksParticlesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB1B56D20F2B8F10009D821 /* FireworksParticlesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworksParticlesTests.swift; sourceTree = "<group>"; };
 		EBB1B56F20F2B8F10009D821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB1B57920F2B9360009D821 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EBB1B57B20F2B93F0009D821 /* Firework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firework.swift; sourceTree = "<group>"; };
+		EBB1B57D20F2B9490009D821 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +80,10 @@
 		EBB1B55920F2B8F00009D821 /* FireworksParticles */ = {
 			isa = PBXGroup;
 			children = (
-				EBB1B55A20F2B8F00009D821 /* AppDelegate.swift */,
-				EBB1B55C20F2B8F00009D821 /* ViewController.swift */,
-				EBB1B55E20F2B8F10009D821 /* Assets.xcassets */,
-				EBB1B56020F2B8F10009D821 /* Main.storyboard */,
-				EBB1B56320F2B8F10009D821 /* Info.plist */,
-				EBB1B56420F2B8F10009D821 /* FireworksParticles.entitlements */,
+				EBB1B57920F2B9360009D821 /* MainView.swift */,
+				EBB1B57B20F2B93F0009D821 /* Firework.swift */,
+				EBB1B57D20F2B9490009D821 /* Shaders.metal */,
+				EBB1B57820F2B8F50009D821 /* OtherFiles */,
 			);
 			path = FireworksParticles;
 			sourceTree = "<group>";
@@ -93,6 +95,18 @@
 				EBB1B56F20F2B8F10009D821 /* Info.plist */,
 			);
 			path = FireworksParticlesTests;
+			sourceTree = "<group>";
+		};
+		EBB1B57820F2B8F50009D821 /* OtherFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EBB1B55A20F2B8F00009D821 /* AppDelegate.swift */,
+				EBB1B55E20F2B8F10009D821 /* Assets.xcassets */,
+				EBB1B56020F2B8F10009D821 /* Main.storyboard */,
+				EBB1B56320F2B8F10009D821 /* Info.plist */,
+				EBB1B56420F2B8F10009D821 /* FireworksParticles.entitlements */,
+			);
+			path = OtherFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,8 +209,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBB1B55D20F2B8F00009D821 /* ViewController.swift in Sources */,
+				EBB1B57E20F2B9490009D821 /* Shaders.metal in Sources */,
 				EBB1B55B20F2B8F00009D821 /* AppDelegate.swift in Sources */,
+				EBB1B57C20F2B93F0009D821 /* Firework.swift in Sources */,
+				EBB1B57A20F2B9360009D821 /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,11 +363,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = FireworksParticles/FireworksParticles.entitlements;
+				CODE_SIGN_ENTITLEMENTS = FireworksParticles/OtherFiles/FireworksParticles.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9QQ2JZFGTQ;
-				INFOPLIST_FILE = FireworksParticles/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FireworksParticles/OtherFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -366,11 +382,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = FireworksParticles/FireworksParticles.entitlements;
+				CODE_SIGN_ENTITLEMENTS = FireworksParticles/OtherFiles/FireworksParticles.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9QQ2JZFGTQ;
-				INFOPLIST_FILE = FireworksParticles/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FireworksParticles/OtherFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
